@@ -67,7 +67,7 @@ const {
 })();
 ```
 
-##uploadToImgBB
+## uploadToImgBB
 
 ```javascript
 require('dotenv').config();
