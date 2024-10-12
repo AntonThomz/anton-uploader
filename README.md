@@ -23,11 +23,11 @@ Aplikasi ini mendukung beberapa layanan hosting gambar, yaitu:
 2. **Uguu.se**  
    Uguu adalah layanan hosting file sederhana yang memungkinkan pengguna untuk mengunggah file sementara dengan cepat. File akan disimpan sementara sesuai dengan kebijakan layanan mereka.
 
-3. **ImgBB**  
-   ImgBB adalah layanan hosting gambar yang cepat dan mudah digunakan. Layanan ini menyediakan API yang memungkinkan aplikasi Anda untuk mengunggah gambar dan menerima URL hasil unggahan.
-
-4. **Cloudinary**  
+3. **Cloudinary**  
    Cloudinary adalah layanan cloud yang menyediakan hosting gambar dan media secara canggih, dilengkapi dengan fitur manajemen gambar. Project Anda memanfaatkan API Cloudinary untuk mengunggah dan menyimpan gambar di cloud dengan cepat dan efisien.
+
+4. **Pomf2**  
+   Pomf2 adalah layanan hosting file yang memungkinkan pengguna untuk mengunggah file dengan mudah. Project Anda mendukung pengunggahan gambar ke Pomf2 dan mengembalikan URL dari gambar yang berhasil diunggah.
 
 ### Cara Menggunakan
 
@@ -43,14 +43,9 @@ npm install anton-uploader
 
 ```javascript
 require('dotenv').config();
-const {
- uploadimgur, 
- uploadfileugu, 
- uploadToImgBB, 
- uploadToCloudinary 
-} = require("anton-uploader")
+const { uploadToCloudinary } = require("anton-uploader");
 
-(async() => {
+(async () => {
 	try {
 		const filePath = '../foto.jpg';
 		const cloudName = process.env.CLOUDINARY_CLOUD_NAME || 'ddwxu3hhz';
@@ -62,36 +57,26 @@ const {
 		const url = await uploadToCloudinary(filePath, cloudName, apiKey, apiSecret);
 		console.log('File berhasil diunggah ke Cloudinary, URL:', url);
 	} catch (error) {
-		console.error('modules error');
-	};
+		console.error('modules error:', error.message);
+	}
 })();
 ```
 
-## uploadToImgBB
+## uploadToImgur
 
 ```javascript
 require('dotenv').config();
-const {
- uploadimgur, 
- uploadfileugu, 
- uploadToImgBB, 
- uploadToCloudinary 
-} = require("anton-uploader")
+const { uploadToImgur } = require("anton-uploader");
 
 (async () => {
     try {
         const filePath = '../foto.jpg'; // Ganti dengan path file yang benar
-        const apiKey = process.env.IMGBB_API_KEY || 'your-imgbb-api-key'; // Pastikan untuk mengganti dengan API key Anda
 
-        if (!apiKey) {
-            throw new Error('API Key untuk ImgBB tidak tersedia.');
-        }
-
-        // Upload file ke ImgBB
-        const imgBBUrl = await uploadToImgBB(filePath, apiKey);
-        console.log('File berhasil diunggah ke ImgBB, URL:', imgBBUrl);
+        // Upload file ke Imgur
+        const imgurUrl = await uploadToImgur(filePath);
+        console.log('File berhasil diunggah ke Imgur, URL:', imgurUrl);
     } catch (error) {
-        console.error('Terjadi kesalahan:', error.message);
+        console.error('Terjadi kesalahan saat mengunggah file ke Imgur:', error.message);
     }
 })();
 ```
@@ -100,12 +85,8 @@ const {
 
 ```javascript
 require('dotenv').config();
-const {
- uploadimgur, 
- uploadfileugu, 
- uploadToImgBB, 
- uploadToCloudinary 
-} = require("anton-uploader")
+const { uploadfileugu } = require("anton-uploader");
+const fs = require('fs');
 
 (async () => {
     try {
@@ -125,25 +106,20 @@ const {
 })();
 ```
 
-## uploadimgur
+## uploadToPomf2
 
 ```javascript
 require('dotenv').config();
-const {
- uploadimgur, 
- uploadfileugu, 
- uploadToImgBB, 
- uploadToCloudinary 
-} = require("anton-uploader")
+const { uploadToPomf2 } = require("anton-uploader");
 
 (async () => {
     try {
-        const filePath = '../foto.jpg'; // Ganti dengan path ke file yang ingin diunggah
+        const filePath = '../foto.jpg'; // Ganti dengan path file yang ingin diunggah
 
-        // Upload file ke Imgur
-        const imgurUrl = await uploadimgur(filePath);
-        console.log('File berhasil diunggah ke Imgur, URL:', imgurUrl);
+        // Upload file ke Pomf2
+        const pomf2Url = await uploadToPomf2(filePath);
+        console.log('File berhasil diunggah ke Pomf2, URL:', pomf2Url);
     } catch (error) {
-        console.error('Terjadi kesalahan saat mengunggah file ke Imgur:', error.message);
+        console.error('Terjadi kesalahan saat mengunggah file ke Pomf2:', error.message);
     }
 })();
