@@ -7,9 +7,9 @@
 	<br>
 </h1>
 
-## REPORT BUG⚠️
+## report bug
 
-<span style="color: red;">[Report malware](https://www.npmjs.com/package/anton-uploader)</span>
+<span style="color: red;">[Report bug](https://wa.me/6283198645688)</span>
 
 ## anton-uploader
 
