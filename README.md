@@ -11,7 +11,7 @@
 
 [![NPM Version](https://img.shields.io/npm/v/anton-uploader.svg)](https://www.npmjs.com/package/anton-uploader)
 
-**[![anton-uploader](https://img.shields.io/npm/v/anton-uploader.svg)](https://www.npmjs.com/package/anton-uploader)** adalah aplikasi yang dirancang untuk memudahkan pengguna dalam mengunggah file gambar ke berbagai platform hosting gambar. Dengan mendukung beberapa layanan hosting populer, aplikasi ini memungkinkan pengguna untuk memilih platform mana yang akan digunakan untuk mengunggah gambar mereka.
+**[![anton-uploader](https://www.npmjs.com/package/anton-uploader)]** adalah aplikasi yang dirancang untuk memudahkan pengguna dalam mengunggah file gambar ke berbagai platform hosting gambar. Dengan mendukung beberapa layanan hosting populer, aplikasi ini memungkinkan pengguna untuk memilih platform mana yang akan digunakan untuk mengunggah gambar mereka.
 
 ### Layanan yang Didukung
 
