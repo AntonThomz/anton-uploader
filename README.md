@@ -1,9 +1,9 @@
 <h1 align="center">
 	<br>
-	<br>
-	<img width="320" src="src/form/utils/media/anton_uploader.jpg" alt="anton-uploader">
-	<br>
-	<br>
+		<br>
+			<img width="320" src="src/form/utils/media/anton_uploader.jpg" alt="anton-uploader">
+		<br>
+		<br>
 	<br>
 </h1>
 
@@ -11,7 +11,7 @@
 
 [![NPM Version](https://img.shields.io/npm/v/anton-uploader.svg)](https://www.npmjs.com/package/anton-uploader)
 
-**anton-uploader** adalah aplikasi yang dirancang untuk memudahkan pengguna dalam mengunggah file gambar ke berbagai platform hosting gambar. Dengan mendukung beberapa layanan hosting populer, aplikasi ini memungkinkan pengguna untuk memilih platform mana yang akan digunakan untuk mengunggah gambar mereka.
+**[![anton-uploader](https://img.shields.io/npm/v/anton-uploader.svg)](https://www.npmjs.com/package/anton-uploader)** adalah aplikasi yang dirancang untuk memudahkan pengguna dalam mengunggah file gambar ke berbagai platform hosting gambar. Dengan mendukung beberapa layanan hosting populer, aplikasi ini memungkinkan pengguna untuk memilih platform mana yang akan digunakan untuk mengunggah gambar mereka.
 
 ### Layanan yang Didukung
 
@@ -29,6 +29,10 @@ Aplikasi ini mendukung beberapa layanan hosting gambar, yaitu:
 4. **Pomf2**  
    Pomf2 adalah layanan hosting file yang memungkinkan pengguna untuk mengunggah file dengan mudah. Project Anda mendukung pengunggahan gambar ke Pomf2 dan mengembalikan URL dari gambar yang berhasil diunggah.
 
+5. **lurkmore**
+
+   Fungsi uploadlurkmore adalah metode yang dirancang untuk mengunggah file gambar ke platform Lurkmore. Dengan menggunakan API Lurkmore, fungsi ini memungkinkan pengguna untuk meng-upload file dengan cepat dan mendapatkan URL dari gambar yang berhasil diunggah.
+
 ### Cara Menggunakan
 
 1. **Instalasi**  
@@ -37,6 +41,14 @@ Untuk menginstal paket ini, gunakan npm dengan perintah berikut:
 
 ```bash
 npm install anton-uploader
+```
+
+2. **Instalasi**  
+
+Untuk menginstal paket dengan git
+
+```bash
+git clone https://github.com/AntonThomz/anton-uploader
 ```
 
 ## uploadToCloudinary
@@ -121,5 +133,22 @@ const { uploadToPomf2 } = require("anton-uploader");
         console.log('File berhasil diunggah ke Pomf2, URL:', pomf2Url);
     } catch (error) {
         console.error('Terjadi kesalahan saat mengunggah file ke Pomf2:', error.message);
+    }
+})();
+```
+
+## uploadlurkmore
+
+```javascript
+require('dotenv').config();
+const { uploadlurkmore } = require("anton-uploader");
+
+(async () => {
+    try {
+        const filePath = '../foto.jpg'; // Ganti dengan path file yang ingin diunggah
+        const url = await uploadlurkmore(filePath);
+        console.log('File berhasil diunggah ke Lurkmore, URL:', url);
+    } catch (error) {
+        console.error('Terjadi kesalahan saat mengunggah file ke Lurkmore:', error.message);
     }
 })();
