@@ -7,6 +7,10 @@
 	<br>
 </h1>
 
+## REPORT BUG⚠️
+
+<span style="color: red;">[Report malware](https://www.npmjs.com/package/anton-uploader)</span>
+
 ## anton-uploader
 
 [![NPM Version](https://img.shields.io/npm/v/anton-uploader.svg)](https://www.npmjs.com/package/anton-uploader)
