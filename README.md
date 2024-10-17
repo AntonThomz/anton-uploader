@@ -41,11 +41,9 @@ Aplikasi ini mendukung beberapa layanan hosting gambar, yaitu:
 
 Wedipe Upload adalah layanan hosting file yang memungkinkan pengguna untuk mengunggah file gambar dengan mudah dan cepat. Aplikasi Anda mendukung upload ke Wedipe, yang kemudian mengembalikan URL dari gambar yang berhasil diunggah. Wedipe cocok untuk pengguna yang membutuhkan solusi upload sederhana dengan URL langsung yang dapat digunakan untuk berbagi gambar.
 
-### Cara Menggunakan
+## install module
 
-1. **Instalasi**  
-
-Untuk menginstal paket ini, gunakan npm dengan perintah berikut:
+- Untuk menginstal paket ini, gunakan npm dengan perintah berikut:
 
 ```bash
 npm install anton-uploader
