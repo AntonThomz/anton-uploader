@@ -39,7 +39,7 @@ Aplikasi ini mendukung beberapa layanan hosting gambar, yaitu:
 
 6. **Wedipe Upload**
 
-Wedipe Upload adalah layanan hosting file yang memungkinkan pengguna untuk mengunggah file gambar dengan mudah dan cepat. Aplikasi Anda mendukung upload ke Wedipe, yang kemudian mengembalikan URL dari gambar yang berhasil diunggah. Wedipe cocok untuk pengguna yang membutuhkan solusi upload sederhana dengan URL langsung yang dapat digunakan untuk berbagi gambar.
+   Wedipe Upload adalah layanan hosting file yang memungkinkan pengguna untuk mengunggah file gambar dengan mudah dan cepat. Aplikasi Anda mendukung upload ke Wedipe, yang kemudian mengembalikan URL dari gambar yang berhasil diunggah. Wedipe cocok untuk pengguna yang membutuhkan solusi upload sederhana dengan URL langsung yang dapat digunakan untuk berbagi gambar.
 
 ## install module
 
