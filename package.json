@@ -1,13 +1,13 @@
 {
   "name": "anton-uploader",
-  "version": "1.0.3",
-  "description": "A module to upload photos to various platforms and get a URL link.",
+  "version": "1.0.4",
+  "description": "Anton Uploader: A powerful module designed for seamless photo uploads to multiple platforms, enabling users to effortlessly obtain URL links for their images. Elevate your image-sharing experience with this versatile tool that connects you to various hosting services in just a few clicks.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"No test specified\""
   },
   "dependencies": {
-    "anton-uploader": "^1.0.1",
+    "anton-http": "^1.0.1",
     "axios": "^1.7.7",
     "cloudinary": "^2.5.1",
     "dotenv": "^16.4.5",
@@ -17,11 +17,19 @@
     "node-fetch": "^3.3.2",
     "path": "^0.12.7"
   },
-  "author": "Your Name",
+  "author": "Anton Thomzz",
   "license": "MIT",
   "homepage": "https://github.com/AntonThomz/anton-uploader#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/AntonThomz/anton-uploader"
-  }
+  },
+  "keywords": [
+    "uploader",
+    "image",
+    "cloudinary",
+    "photo",
+    "anton-keygen-pro",
+    "anton-uploader"
+  ]
 }
